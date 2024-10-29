@@ -1,13 +1,20 @@
 import './Card.css';
 import Button from './Button';
-
-const Card = () => {
+// added type Props and all the strings
+type Props={
+    title: string;
+    description: string;
+    img: string;
+}
+// Added {title, description,img}:Props to make props
+// Then I changed the information to {img(instead of the img address), title (instead of Tenerife), description(instead of one description)} after each class
+const Card = ({title, description, img}:Props) => {
   return (
     <div className="card">
-    <img src="https://villaadejebeachhotel.com/wp-content/uploads/2022/04/garachico-tenerife.jpg" alt="traveltips" className="card-image" />
+    <img src={img} alt="traveltips" className="card-image" />
       <div className="card-content">
-        <h2 className="card-title">Tenerife</h2>
-        <p className="card-description">Are you travelling to Tenerife? This is what you want and need to do in Tenerife!</p>
+        <h2 className="card-title">{title}</h2>
+        <p className="card-description">{description}</p>
         <Button/>
       </div>
     </div>

@@ -2,7 +2,7 @@ import "./Button.css"
 
 const Button = () => {
     return(
-        <button className="Button">Sjá nánar</button>
+        <button className="Button">Learn more</button>
     )
 }
 
